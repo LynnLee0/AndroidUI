@@ -3,7 +3,6 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="pink"
     android:orientation="vertical">
     <TextView
         android:layout_width="match_parent"
@@ -12,8 +11,9 @@
         android:gravity="center"
         android:textSize="30sp"
         />
-    <View android:layout_width="match_parent" android:layout_height="1dp"
-        android:background="orange"
+    <View android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#ffffff"
         />
     <RelativeLayout
         android:layout_width="match_parent"
@@ -33,9 +33,10 @@
             android:text="用户："
             android:textSize="30dp"/>
         <EditText
+            android:id="@+id/userId"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textSize="30dp"/>
+            android:textSize="30sp"/>
     </LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"
@@ -45,14 +46,18 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="密码："
-            android:textSize="30dp"/>
+            android:textSize="30sp"/>
         <EditText
+            android:id="@+id/userPwd"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:inputType="numberPassword"
             android:textSize="30sp"/>
     </LinearLayout>
 
     <Button
+        android:layout_marginTop="30dp"
+        android:id="@+id/btn_login"
         android:layout_width="match_parent"
         android:layout_height="80dp"
         android:text="登录"
