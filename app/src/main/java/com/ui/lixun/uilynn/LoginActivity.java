@@ -2,6 +2,7 @@ package com.ui.lixun.uilynn;
 
 import android.app.Activity;
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -15,7 +16,8 @@ import java.util.Map;
 public class LoginActivity extends Activity {
     //private String userId = "lixun";
    // private String passWord = "123456";
-    Map<String,String> userMap = new HashMap<String, String>();
+    //Map<String,String> userMap = new HashMap<String, String>();
+    Map<String,String> userMap = new HashMap();
     Context mContext;
 
     @Override
@@ -37,6 +39,8 @@ public class LoginActivity extends Activity {
                 //Toast.makeText(mContext ,"密码错误",Toast.LENGTH_LONG).show();
 
                 if(checkSign(userId,userPwd)){
+                    Intent intent = new Intent(LoginActivity.this,MainActivity.class);
+                    startActivity(intent);
                     Toast.makeText(mContext ,"登录成功",Toast.LENGTH_LONG).show();
                 }else{
                     Toast.makeText(mContext ,"密码错误",Toast.LENGTH_LONG).show();
